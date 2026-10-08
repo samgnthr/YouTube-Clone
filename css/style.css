@@ -44,7 +44,7 @@ header{
     background: var(--bg-color-header);
     backdrop-filter: blur(10px);
     height: 56px;
-    padding: 0 16px;
+    padding: 0 1vw;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -66,8 +66,8 @@ header{
     cursor: pointer;
     height: 20px;
     width: 93px;
-    padding: 18px 14px 18px 16px;
-    margin-left: 30px;
+    padding: 18px 14px 18px 14px;
+    margin-left: 1.4vw;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +91,7 @@ header{
     height: 40px;
     padding: 8px;
     box-sizing: border-box;
-    background-color: var(--bg-color);
+    background-color: transparent;
 }
 
 .hamburger:hover{
@@ -109,6 +109,10 @@ header{
     align-items: center;
 }
 
+body.mini .center{
+    flex: 0 1 532px;
+}
+
 .search{
     flex: 1;
     display: flex;
@@ -117,6 +121,13 @@ header{
     padding: 0 4px;
     height: 40px;
 }
+
+body.micro .search{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
 
 .InputBox{
     box-shadow: none;
@@ -127,7 +138,7 @@ header{
     border-color: var(--InputBorder);
     border-right: 0;
     border-radius: 40px 0 0 40px;
-    margin-left: 32px;
+    margin-left: 12px;
     padding: 0 4px 0 16px;
     display: flex;
     flex: 1;
@@ -135,6 +146,10 @@ header{
     outline: none;
     color: var(--primary-text-color);
     font-size: 0.875rem;
+}
+
+body.micro .InputBox{
+    display: none;
 }
 
 
@@ -157,6 +172,13 @@ input[type="search"]::-webkit-search-cancel-button {
     cursor: pointer;
 }
 
+body.micro .SearchButton{
+    border: none;
+    width: 36px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
 .voice:hover{
     background-color: var(--hover-svg);
 }
@@ -172,8 +194,14 @@ input[type="search"]::-webkit-search-cancel-button {
     justify-content: center;
     border-radius: 50%;
     background-color: var(--InputBorder);
-    margin-left: 12px;
+    margin-left: 1vw;
     cursor: pointer;
+}
+
+body.micro .voice{
+    background-color: transparent;
+    margin-left: 0;
+    padding: 0 8px;
 }
 
 img.micro{
@@ -186,7 +214,7 @@ img.micro{
 .end{
     display: flex;
     flex-direction: row;
-    min-width: 225px;
+    min-width: 200px;
     align-items: center;
     justify-content: flex-end;
 }
@@ -197,7 +225,7 @@ img.micro{
     cursor: pointer;
     line-height: 1;
     padding: 8px;
-    margin-right: 8px;
+    margin-right: .4vw;
     width: 40px;
     height: 40px;
     background-color: transparent;
@@ -205,9 +233,9 @@ img.micro{
 
 .connexion{
     padding: 0 15px;
+    margin: 0 8px;
     color: var(--connexion-button);
     position: relative;
-    margin: 0;
     white-space: nowrap;
     min-width: 0;
     text-transform: none;
@@ -506,7 +534,7 @@ aside.mini .section {
 }
 
 .filtre.micro{
-    padding: 12px 24px 12px 12px;
+    padding: 12px 18px 12px 18px;
 }
 
 .paquette-de-chips {
@@ -573,7 +601,7 @@ main.mini{
 }
 
 main.micro{
-    margin: 112px 12px 24px 88px;
+    margin: 112px 12px 24px 12px;
 }
 
 .grid{
@@ -616,6 +644,10 @@ main.micro .grid{
 main.mini .carte-de-video{
     min-width: 300px ;
     height: 38vw;
+}
+
+main.micro .carte-de-video{
+    height: 75vw;
 }
 
 
