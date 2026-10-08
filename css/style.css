@@ -199,9 +199,7 @@ body.micro .SearchButton{
 }
 
 body.micro .voice{
-    background-color: transparent;
-    margin-left: 0;
-    padding: 0 8px;
+    display: none;
 }
 
 img.micro{
@@ -231,6 +229,10 @@ img.micro{
     background-color: transparent;
 }
 
+body.micro .menu{
+    display: none;
+}
+
 .connexion{
     padding: 0 15px;
     margin: 0 8px;
@@ -256,6 +258,10 @@ img.micro{
     line-height: 40px;
     border-radius: 20px;
     border: 1px solid var(--hover-svg);
+}
+
+body.micro .end{
+    min-width: 145px;
 }
 
 .connexion:hover{
